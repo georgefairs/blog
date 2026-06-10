@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100" height="100">
+  <rect width="100" height="100" rx="20" fill="#1d1f21" />
+  <text x="50" y="50" dy="0.35em" text-anchor="middle"
+        font-family="ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, sans-serif"
+        font-size="46" font-weight="700" fill="#fafafa" letter-spacing="-2">GF</text>
+</svg>
