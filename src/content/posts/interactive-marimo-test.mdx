@@ -1,0 +1,37 @@
+---
+title: "Interactive notebooks with marimo (test)"
+pubDatetime: 2026-06-11T12:00:00Z
+featured: true
+draft: false
+tags:
+  - meta
+  - complexity
+  - python
+description: "A test post embedding a live, in-browser marimo notebook — a logistic map chaos explorer running entirely on WebAssembly."
+---
+
+This is a test of embedding a [marimo](https://marimo.io) notebook directly in a post.
+marimo notebooks export to **WebAssembly**, so the Python below runs entirely in your
+browser — there's no server, which means it works fine on a static site like this one.
+
+The example is the **logistic map**, `xₙ₊₁ = r·xₙ(1 − xₙ)` — a one-line model of
+constrained growth that slides from a stable orbit into full chaos as you push the growth
+rate `r` past ~3.57. Drag the sliders:
+
+<iframe
+  src="https://marimo.app/github/georgefairs/blog/blob/main/notebooks/logistic_map.py/wasm?embed=true"
+  title="Logistic map explorer (marimo)"
+  loading="lazy"
+  sandbox="allow-scripts allow-same-origin allow-downloads allow-popups allow-forms"
+  style="width: 100%; height: 640px; border: 1px solid var(--border); border-radius: 8px;"
+></iframe>
+
+It can take a few seconds on first load while the WebAssembly runtime and Python packages
+(`numpy`, `matplotlib`) download and start up.
+
+---
+
+**How this was made:** the notebook lives at `notebooks/logistic_map.py` in this site's
+repo. The `<iframe>` above points at [marimo.app](https://marimo.app), which fetches that
+file from GitHub and runs it in your browser via WebAssembly — so nothing but the small
+notebook file is committed here.
